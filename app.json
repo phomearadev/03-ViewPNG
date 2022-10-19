@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "03-MagpieBank",
-    "slug": "03-MagpieBank",
+    "name": "ViewPNG",
+    "slug": "ViewPNG",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,10 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      //"backgroundColor": "#ffffff"
+      //"backgroundColor": "blue"
+      //"backgroundColor": "#000fff"
+      "backgroundColor": "#2d9eee"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

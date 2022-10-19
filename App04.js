@@ -1,16 +1,10 @@
-// 03-ViewPNG/App07.js
-// set up splashscreen
+//03-ViewPNG/App04.js
+// resized the bird image to a smaller logo that fits better in the layout
+//attempted to fix the brown colored borders...
 
 import React from "react";
-//import { StyleSheet, Text, Image, View } from "react-native";
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from "react-native";
 import { StatusBar } from 'expo-status-bar';
-
-import * as SplashScreen from 'expo-splash-screen';
-
-
-SplashScreen.preventAutoHideAsync();
-setTimeout(SplashScreen.hideAsync, 5000);
 
 
 const Flex = () => {
@@ -33,7 +27,7 @@ const Flex = () => {
     </View>
 
     <View style={styles.container3}>
-      <View style={{ flex: 1, backgroundColor: "gold" }}>  
+      <View style={{ flex: 1, backgroundColor: "yellow" }}>  
         <Text style={styles.moneytitle}>£1,000,000 </Text>
       </View>
     </View>
@@ -58,10 +52,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
     backgroundColor: "silver",
     borderWidth: 1,
-    borderTopColor: "brown",
-    borderLeftColor: "brown",
-    borderRightColor: "brown",
-    borderBottomColor: "dodgerblue"
+    borderColor: "brown",
   },
   container2: {
     flex: 1,
@@ -69,10 +60,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "silver",
     borderWidth: 1,
-    borderBottomColor: "brown",
-    borderLeftColor: "brown",
-    borderRightColor: "brown",
-    borderTopColor: "dodgerblue"
+    borderColor: "brown",
   },
   container3: {
     flex: 3,
@@ -88,7 +76,7 @@ const styles = StyleSheet.create({
     maxHeight: 267,
     flexDirection: "row",
     backgroundColor: "silver",
-    borderWidth: 1,
+    borderWidth: 5,
     borderColor: "brown",
   },
   box: {
@@ -96,12 +84,16 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginLeft: 15,
     marginRight: 15,
+    //width: 20,
     height: 160,
     alignItems: "center",
     margin: 10,
     backgroundColor: "chocolate",
     borderWidth: 2,
     borderColor: "brown"
+    //backgroundColor: "#ffcc00"
+    //borderColor: "black",
+    //borderColor: "darkgoldenrod",
   },
   title: {
     marginTop: 65,
@@ -110,6 +102,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   mytitle: {
+    //marginTop: 20,
     textAlign: "right",
     padding: 20,
     fontSize: 28,
@@ -122,11 +115,15 @@ const styles = StyleSheet.create({
     fontSize: 23,
     color: 'black'
   },
-  tinyLogo: {
-    marginLeft:30,
-    marginTop:30,  
-    width: 171,
-    height: 103
+ tinyLogo: {
+  marginLeft:30,
+  marginTop:30,  
+  //width: 146,
+  //  height: 88
+  //width: 200,
+  //height: 120
+  width: 171,
+  height: 103
   }
 });
 

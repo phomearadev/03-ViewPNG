@@ -1,16 +1,9 @@
-// 03-ViewPNG/App07.js
-// set up splashscreen
+// 03-ViewPNG/App06.js
+// changed color to "gold" and tidied up code
 
 import React from "react";
-//import { StyleSheet, Text, Image, View } from "react-native";
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from "react-native";
 import { StatusBar } from 'expo-status-bar';
-
-import * as SplashScreen from 'expo-splash-screen';
-
-
-SplashScreen.preventAutoHideAsync();
-setTimeout(SplashScreen.hideAsync, 5000);
 
 
 const Flex = () => {

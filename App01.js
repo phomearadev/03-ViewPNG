@@ -1,89 +1,69 @@
-// 03-ViewPNG/App07.js
-// set up splashscreen
+//03-ViewPNG/App01.js
+//Got the graphic png file to display bird logo!!!
 
 import React from "react";
-//import { StyleSheet, Text, Image, View } from "react-native";
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from "react-native";
 import { StatusBar } from 'expo-status-bar';
-
-import * as SplashScreen from 'expo-splash-screen';
-
-
-SplashScreen.preventAutoHideAsync();
-setTimeout(SplashScreen.hideAsync, 5000);
 
 
 const Flex = () => {
 
   return (
    
-  <>  
-    <View style={styles.container1}>
-      <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
-        <Image
-        style={styles.tinyLogo}
+  <>
+    
+    
+    <View style={styles.container}>
+    <View style={{ flex: 1, backgroundColor: "blue" }}>
+    <Image
+       style={styles.tinyLogo}
         source={require('C:/APP/03-ViewPNG/assets/magpie.png')} />
-      </View>
+    <Text style={styles.mytitle}>Magpie Bank </Text>
+       
+    </View>
     </View>
 
-    <View style={styles.container2}>   
-      <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
-        <Text style={styles.mytitle}>Magpie Bank </Text>
-      </View>
-    </View>
 
-    <View style={styles.container3}>
-      <View style={{ flex: 1, backgroundColor: "gold" }}>  
+
+    <View style={styles.container2}>
+    <View style={{ flex: 1, backgroundColor: "yellow" }}>  
         <Text style={styles.moneytitle}>£1,000,000 </Text>
       </View>
     </View>
 
-    <View style={styles.container4}>
-      <View style={styles.box}>  
+    <View style={styles.container3}>
+    <View style={styles.box}>  
         <Text style={styles.title}> Home </Text>
       </View>
       <View style={styles.box}>  
         <Text style={styles.title}> Payments </Text>
       </View>
     </View>
-  </>    
+  </>
+    
   );
 };
 
 const styles = StyleSheet.create({
-  container1: {
-    flex: 2,
-    maxHeight: 200,
+  container: {
+    flex: 1,
+    maxHeight: 267,
     flexDirection: "column",
     marginTop: 40,
     backgroundColor: "silver",
     borderWidth: 1,
-    borderTopColor: "brown",
-    borderLeftColor: "brown",
-    borderRightColor: "brown",
-    borderBottomColor: "dodgerblue"
+    borderColor: "brown",
   },
   container2: {
     flex: 1,
-    maxHeight: 67,
-    flexDirection: "column",
-    backgroundColor: "silver",
-    borderWidth: 1,
-    borderBottomColor: "brown",
-    borderLeftColor: "brown",
-    borderRightColor: "brown",
-    borderTopColor: "dodgerblue"
-  },
-  container3: {
-    flex: 3,
     maxHeight: 267,
     flexDirection: "column",
     backgroundColor: "silver",
     borderWidth: 1,
     borderColor: "brown",
   },
-  container4: {
-    flex: 3,
+  container3: {
+    flex: 1,
     paddingHorizontal: 15,
     maxHeight: 267,
     flexDirection: "row",
@@ -96,12 +76,16 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginLeft: 15,
     marginRight: 15,
+    //width: 20,
     height: 160,
     alignItems: "center",
     margin: 10,
     backgroundColor: "chocolate",
     borderWidth: 2,
     borderColor: "brown"
+    //backgroundColor: "#ffcc00"
+    //borderColor: "black",
+    //borderColor: "darkgoldenrod",
   },
   title: {
     marginTop: 65,
@@ -110,6 +94,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   mytitle: {
+    marginTop: 20,
     textAlign: "right",
     padding: 20,
     fontSize: 28,
@@ -122,11 +107,11 @@ const styles = StyleSheet.create({
     fontSize: 23,
     color: 'black'
   },
-  tinyLogo: {
-    marginLeft:30,
-    marginTop:30,  
-    width: 171,
-    height: 103
+ tinyLogo: {
+  marginLeft:10,
+  marginTop:20,  
+  width: 266,
+    height: 158
   }
 });
 

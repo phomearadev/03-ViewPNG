@@ -2,12 +2,9 @@
 // set up splashscreen
 
 import React from "react";
-//import { StyleSheet, Text, Image, View } from "react-native";
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from "react-native";
 import { StatusBar } from 'expo-status-bar';
-
 import * as SplashScreen from 'expo-splash-screen';
-
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
