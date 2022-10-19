@@ -7,6 +7,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import * as SplashScreen from 'expo-splash-screen';
+//note ref githubbing on 19/10/22
 
 
 SplashScreen.preventAutoHideAsync();
