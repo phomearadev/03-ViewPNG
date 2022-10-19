@@ -8,7 +8,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import * as SplashScreen from 'expo-splash-screen';
 //note ref githubbing on 19/10/22
-
+//githubbed 19/10/2022
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
