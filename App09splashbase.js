@@ -1,15 +1,11 @@
 // 03-ViewPNG/App07.js
 // set up splashscreen
 
-//import React from "react";
+import React from "react";
 //import { StyleSheet, Text, Image, View } from "react-native";
-//import { Button, View, Text } from 'react-native';
-
-import * as React from 'react';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+
 import * as SplashScreen from 'expo-splash-screen';
 
 
@@ -17,9 +13,10 @@ SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
 
 
-function HomeScreen({ navigation }) {
+const Flex = () => {
+
   return (
-      
+   
   <>  
     <View style={styles.container1}>
       <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
@@ -45,43 +42,13 @@ function HomeScreen({ navigation }) {
       <View style={styles.box}>  
         <Text style={styles.title}> Home </Text>
       </View>
-
-    <View style={styles.box}>  
+      <View style={styles.box}>  
         <Text style={styles.title}> Payments </Text>
-        <Button
-        title="MyPayments"
-        onPress={() => navigation.navigate('MyPayments')}
-      />
-    </View>
+      </View>
     </View>
   </>    
   );
 };
-
-function MyPaymentsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>MyPayments Screen</Text>
-    </View>
-  );
-}
-
-const Stack = createNativeStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{ title: 'My Overview' }}
-      />
-        <Stack.Screen name="MyPayments" component={MyPaymentsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 
 const styles = StyleSheet.create({
   container1: {
@@ -163,4 +130,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+export default Flex;
