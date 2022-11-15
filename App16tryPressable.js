@@ -1,54 +1,65 @@
+// 03-ViewPNG/App07.js
+// set up splashscreen
+
+//import React from "react";
+//import { StyleSheet, Text, Image, View } from "react-native";
+//import { Button, View, Text } from 'react-native';
+
 import * as React from 'react';
 import { Pressable, Image, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
+
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
 
+
 function HomeScreen({ navigation }) {
-  return (  
-  <View style={{ flex: 1}}>  
-
+  return (
+      
+  <>  
     <View style={styles.container1}>
+      <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
         <Image
-        style={styles.magpiegraphic}
+        style={styles.tinyLogo}
         source={require('C:/APP/03-ViewPNG/assets/magpie.png')} />
-         <Text style={styles.magpietitle}>Magpie Bank </Text>
+      </View>
     </View>
 
-    <View style={styles.container2}>      
-        <Text style={styles.moneytitle}>£1,000,000 </Text>
+    <View style={styles.container2}>   
+      <View style={{ flex: 1, backgroundColor: "dodgerblue" }}>
+        <Text style={styles.mytitle}>Magpie Bank </Text>
+      </View>
     </View>
- 
+
     <View style={styles.container3}>
-      <View style={styles.box}>  
-        <Text style={styles.title}> MyHome </Text>
-      </View>
-      <View style={styles.box}>  
-        <Pressable
-          onPress={() => navigation.navigate('Payments')}>
-          <Text style={styles.title}>
-            MyPayments
-          </Text>
-        </Pressable>
+      <View style={{ flex: 1, backgroundColor: "gold" }}>  
+        <Text style={styles.moneytitle}>£1,000,000 </Text>
       </View>
     </View>
 
-  </View>    
+    <View style={styles.container4}>
+      <View style={styles.box}>  
+        <Text style={styles.title}> Home </Text>
+      </View>
+
+    <View style={styles.box}>  
+        <Pressable>                                                                       .                        .                Payments"
+        onPress={() => navigation.navigate('Payments')}
+      </Pressable>
+    </View>
+    </View>
+  </>    
   );
 };
 
 function MyPayment() {
   return (
-       <View style={[styles.box,{
-        marginTop: 300,
-        marginBottom: 300,
-        marginLeft: 75,
-        marginRight: 75}
-      ]}>  
-      <Text>Make a New Payment...</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Make a Payment...</Text>
     </View>
   );
 }
@@ -62,6 +73,7 @@ function App() {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
+       // options={{ title: 'My Overview' }}
       />
         <Stack.Screen name="Payments" component={MyPayment} />
       </Stack.Navigator>
@@ -71,22 +83,40 @@ function App() {
 
 const styles = StyleSheet.create({
   container1: {
-    flex: 1,
+    flex: 2,
+    maxHeight: 200,
     flexDirection: "column",
-    backgroundColor: "dodgerblue",
+    marginTop: 40,
+    backgroundColor: "silver",
     borderWidth: 1,
-    borderColor: "brown",
+    borderTopColor: "brown",
+    borderLeftColor: "brown",
+    borderRightColor: "brown",
+    borderBottomColor: "dodgerblue"
   },
   container2: {
     flex: 1,
+    maxHeight: 67,
     flexDirection: "column",
-    backgroundColor: "gold",
+    backgroundColor: "silver",
+    borderWidth: 1,
+    borderBottomColor: "brown",
+    borderLeftColor: "brown",
+    borderRightColor: "brown",
+    borderTopColor: "dodgerblue"
+  },
+  container3: {
+    flex: 3,
+    maxHeight: 267,
+    flexDirection: "column",
+    backgroundColor: "silver",
     borderWidth: 1,
     borderColor: "brown",
   },
-  container3: {
-    flex: 1,
+  container4: {
+    flex: 3,
     paddingHorizontal: 15,
+    maxHeight: 267,
     flexDirection: "row",
     backgroundColor: "silver",
     borderWidth: 1,
@@ -95,7 +125,6 @@ const styles = StyleSheet.create({
   box: {
     flex: 1,
     marginTop: 50,
-    marginBottom: 50,
     marginLeft: 15,
     marginRight: 15,
     height: 160,
@@ -112,8 +141,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     title: "ME",
   },
-  magpietitle: {
-    marginTop: 45,
+  mytitle: {
     textAlign: "right",
     padding: 20,
     fontSize: 28,
@@ -126,7 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 23,
     color: 'black'
   },
-  magpiegraphic: {
+  tinyLogo: {
     marginLeft:30,
     marginTop:30,  
     width: 171,
